@@ -128,14 +128,6 @@ body{
     background-color: #f4f6f5;
     color: $bg;
     font-weight: 500;
-    &__title{
-        font-size: 36px;
-        line-height: 60px;
-        font-weight: 700;
-        color: $bg;
-        text-align: center;
-        margin-bottom: 60px;
-    }
 }
 .products__inner-btn{
     text-align: center;
@@ -223,6 +215,12 @@ body{
             font-size: 14px;
         }
     }
+.product__item-star{
+        font-size: 13px;
+        span{
+            color: $bg;
+        }
+    }
 }
 .products__bottom-btn{
     text-align: center;
@@ -235,7 +233,7 @@ body{
         cursor: pointer;
         box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
         & + button{
-            margin: 45px 5px 0;
+            margin: 45px 7px 0;
         }
         &.mixitup-control-active{
             color: #fff;
@@ -243,6 +241,140 @@ body{
         }
     }
 }
+.rate-star{
+    display: inline-block;
+    margin-right: 10px; 
+}
+.products__slider{
+    padding: 120px 0;
+    &-title{
+        margin-bottom: 60px;
+    }
+    .slick-dots{
+    text-align: center;
+    li{
+        display: inline-block;
+        & + li{
+        margin-left: 7px;
+        }
+        &.slick-active{
+        button{
+            background-color: $green;
+        }
+        }
+        button{
+        background-color: #d3d2d2;
+        border-radius: 50%;
+        border: none;
+        outline: transparent;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        }
+    }
+    }
+}
 
+.advantages{
+    padding: 110px 0;
+    background-color: $bg;
+    &__title{
+        color: #fff;
+        margin-bottom: 80px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        max-width: 370px;
+        text-align: center;
+        padding: 0 20px;
+        &:hover{
+            .advantages__item-img{
+                background-color: $green;
+                color: #e7ecf2;
+            }
+            .advantages__item-title{
+                color: $green;
+            }
+            // .advantages__item-img{
+            //     g{
+            //         fill: #fff; Нужно вставить другой код SVG, чтобы изменить цвет.
+            //     }
+            // }
+        }
+        &-img{
+            background-color: #fff;
+            border-radius: 50%;
+            width: 114px;
+            height: 114px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            transition: all .3s;
+            margin-bottom: 25px;
+        }
+        &-title{
+            margin-bottom: 15px;
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 500;
+            color: #fff;
+            transition: all .3s;
+        }
+        &-text{
+            color: #b0bec5;
+        }
+    }
+}
+.icon-lock{
+    width: 50px;
+    &:hover{
+        color: #e7ecf2;
+    }
+}
+.icon-gift{
+    width: 70px;
+}
+.icon-heart-o{
+    width: 80px;
+}
 
-  
+.author{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        max-width: 650px;
+        min-height: 215px;
+        background-color: $green;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__text{
+        font-size: 30px;
+        line-height: 36px;
+        color: #fff;
+        margin-right: 45px;
+        max-width: 270px;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__link{
+        font-size: 18px;
+        line-height: 36px;
+        color: $bg;
+        background-color: #fff;
+        padding: 14px 40px;
+    }
+}
